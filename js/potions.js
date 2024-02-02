@@ -38,10 +38,12 @@ const oldToadShop = {
     ],
 
     potionSold(potion) {
-        const { name, stock, id } = potion;
+        const { name, stock, id , src, price} = potion;
+        console.log(potion)
         let index = potions.findIndex(potion => potion.id == id);
-        // potions[index].stock -= 1;
-        console.log(potions[index].stock -= 1);
+        potions[index].stock -= 1;
+        // console.log(potions[index].stock -= 1);
+        potions.splice(index, 1, { id: id, name: name, stock: stock, src: src, price: price });
     }
 }
 
@@ -51,7 +53,7 @@ const speechBubble = document.querySelector(".speech-bubble");
 const yes = document.querySelector("#yesBtn");
 const no = document.querySelector("#noBtn");
 // const pepe = document.querySelector("#dealer");
-const pepe = document.querySelector("#dealer div::after");
+
 
 let potions = oldToadShop.potions;
 
@@ -76,8 +78,6 @@ yes.addEventListener("click", () => {
 
 no.addEventListener("click", () => speechBubble.innerText = "Your loss kid, you will not find these kind of deals anywhere. Talk to me again, if you change your mind.");
 
-console.log(pepe);
-// pepe.addEventListener("click", () => speechBubble.classList.toggle("is-hidden"));
 const inventory = {
     bag: [
         
@@ -89,5 +89,6 @@ document.querySelectorAll(".buy-button").forEach((btn) => {
     btn.addEventListener("click", () => {
         const potion = btn.parentNode.parentNode.dataset;
         oldToadShop.potionSold(potion);
+        console.log(potions);
     });
 });

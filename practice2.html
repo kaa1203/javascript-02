@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regis Form</title>
+    <link rel="stylesheet" href="css/practice2.css">
+</head>
+<body>
+    <a href="index.html">Go to index</a>
+    <div class="container">
+        <h2></h2>
+        <form>
+            <div class="name-wrapper">
+                <label>
+                    First Name
+                    <input type="text" name="fname" placeholder="First Name">
+                </label>
+                <label>
+                    Last Name
+                    <input type="text" name="lname" placeholder="Last Name">
+                </label>
+            </div>
+            <div class="uname-wrapper">
+                <label>
+                    Username
+                    <input type="text" name="uname" placeholder="Username">
+                </label>
+                <!-- <div class="form-wrapper"> -->
+                    <label>
+                        Gender
+                        <select class="gender">
+                            <option name="gender" value="male">Male</option>
+                            <option name="gender" value="female">Female</option>
+                        </select>
+                    </label>
+                <!-- </div> -->
+            </div>
+            <div class="pword-wrapper">
+                <label>
+                    Password
+                    <input type="password" name="pword" placeholder="Password">
+                    <button type="button">Show Password</button>
+                </label>
+                <label>
+                    Password
+                    <input type="password" name="pword2"placeholder="Confirm Password">
+                    <button type="button">Show Password</button>
+                </label>
+                
+            </div>
+            <button type="submit">Register</button>
+            
+        </form>
+    </div>
+
+    <script src="js/practice2.js"></script>
+</body>
+</html>
