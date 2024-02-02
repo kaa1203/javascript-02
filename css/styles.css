@@ -1,0 +1,162 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.image {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.button {
+    padding: 5px 20px;
+    border: 1px solid white;
+    border-radius: 5px;
+    background-color: tan;
+}
+
+.container {
+    width: 1025px;
+    margin: 0 auto;
+}
+
+.is-hidden {
+    visibility: hidden;
+}
+
+.shop {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.roof {
+    margin-top: 20px;
+    position: relative;
+    background-color: #d4af37;
+    border: 1px solid white;
+    height: 100px;
+}
+
+.roof::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    border-bottom: 100px solid transparent;
+    border-right: 100px solid transparent;
+    border-left: 110px solid white;
+}
+
+.roof::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+    border-bottom: 100px solid transparent;
+    border-right: 110px solid white;
+    border-left: 100px solid transparent;
+}
+
+.sign {
+    position: absolute;
+    top: 40%;
+    right: 40%;
+    border-radius: 10px;
+    background: red;
+    padding: 10px 20px;
+}
+
+.shop-body {
+    align-self: center;
+    width: 95%;
+    border: 1px solid burlywood;
+    padding: 10px;
+}
+
+.shop-table {
+    width: 100%;
+    border: 1px solid gainsboro;
+    border-collapse: collapse;
+}
+
+.shop-table th {
+    background-color: beige;
+    border-bottom: 1px solid burlywood;
+}
+
+.shop-table td, th {
+    padding: 10px;
+    text-align: center;
+}
+
+tbody tr:nth-child(even) {
+    background-color: rgb(233, 210, 181);
+}
+
+tbody tr td:first-child {
+    text-align: -webkit-center;
+}
+
+td .button {
+    position: relative;
+    z-index: 99999;
+}
+
+.potion {
+    width: 30px;
+    height: 30px;
+}
+
+.speech-bubble {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-size: 18px;
+    position: absolute;
+    top: 50%;
+    right: 28%;
+    width: 300px;
+    padding: 20px;
+    border-radius: 20px;
+    background-color: rgba(206, 192, 152, 0.918);
+}
+
+.speech-bubble::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    position: absolute;
+    right: -40px;
+    border-bottom: 20px solid transparent;
+    border-top: 20px solid transparent;
+    border-left: 40px solid rgba(206, 192, 152, 0.918);
+}
+
+.speech-bubble .button {
+    font-size: 16px;
+    white-space: nowrap;
+}
+
+.dealer-pepe::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 45%;
+    right: 0;
+    width: 500px;
+    height: 500px;
+    background: url(../images/pepe-dealer.png);
+}
