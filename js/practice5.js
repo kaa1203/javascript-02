@@ -56,14 +56,14 @@ function scoreChecker() {
     case tds[6].innerText === "X" && tds[7].innerText === "X" && tds[8].innerText === "X":
       mode === 0 ? result.innerText = "Player One Win!" : result.innerText = "Bot Win!";
       overlay.style.visibility = "visible";
-      setTimeout(clearBoard, 700);
+      setTimeout(clearBoard, 800);
       break;
     case tds[0].innerText !== "" && tds[1].innerText !== "" && tds[2].innerText !== ""
       && tds[3].innerText !== "" && tds[4].innerText !== "" && tds[5].innerText !== ""
       && tds[6].innerText !== "" && tds[7].innerText !== "" && tds[8].innerText !== "": 
       overlay.style.visibility = "visible";
       result.innerText = "It's a Tie!";
-      setTimeout(clearBoard, 700);
+      setTimeout(clearBoard, 800);
   }
 }
 
@@ -79,12 +79,10 @@ player.addEventListener("click", () => {
           td.innerText = "X";
           isTurnFinish = true;
           scoreChecker();
-          // result.innerText = "Player One Win!";
         } else {
           td.innerText = "O";
           isTurnFinish = false;
           scoreChecker();
-          // result.innerText = "Player Two Win!";
         }
       }
     });
