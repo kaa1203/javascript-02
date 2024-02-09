@@ -1,0 +1,67 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container {
+    width: 1045px;
+    margin: 0 auto;
+}
+
+.tool-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.button {
+    border: 1px solid rgb(83, 175, 152);
+    border-radius: 3px;
+    padding: 5px 8px;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.italic {
+    font-style: italic;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+.strikethrough {
+    text-decoration: line-through;
+}
+
+.comment-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.spoiler {
+    background-color: grey;
+    color: transparent;
+}
+
+textarea {
+    width: 50%;
+    padding: 10px;
+    resize: none;
+    border-radius: 3px;
+}
+
+.comment-box {
+    border: 1px solid black;
+    border-radius: 4px;
+    width: 100%;
+    padding: 20px;
+}

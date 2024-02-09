@@ -3,10 +3,10 @@ const output = document.querySelector("#ve-output");
 const h2 = document.querySelector("h2");
 const btn = document.querySelector("#ve-btn");
 
-let text = "";
 btn.addEventListener("click", () => {
+    let text = "";
     let nums = input.value.toString().split("");
-    if (nums.length === 0) return console.log("fill the field")
+    if (nums.length === 0) return output.textContent = "fill the field first!";
     
     let total = nums.reduce((total, num) => total += parseInt(num), 0);
     if (total > 9) {
