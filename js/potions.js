@@ -39,10 +39,8 @@ const oldToadShop = {
 
     potionSold(potion) {
         const { name, stock, id , src, price} = potion;
-        console.log(potion)
         let index = potions.findIndex(potion => potion.id == id);
         potions[index].stock -= 1;
-        // console.log(potions[index].stock -= 1);
         potions.splice(index, 1, { id: id, name: name, stock: stock, src: src, price: price });
     }
 }
@@ -89,6 +87,6 @@ document.querySelectorAll(".buy-button").forEach((btn) => {
     btn.addEventListener("click", () => {
         const potion = btn.parentNode.parentNode.dataset;
         oldToadShop.potionSold(potion);
-        console.log(potions);
     });
 });
+

@@ -1,5 +1,7 @@
 const tools = document.querySelector(".tool-wrapper");
-const commentBox = document.querySelector("#commentBox");
+const comBox = document.querySelector("#commentBox");
+const comSec = document.querySelector("#comment-section");
+const comBtn = document.querySelector(".comment-button");
 const spans = document.getElementsByTagName("span");
 const btns = document.querySelectorAll("[data-font]");
 
@@ -8,6 +10,12 @@ tools.addEventListener("click", (e) => {
    if (e.target.tagName === "A") {
       let btn = e.target.dataset.font;
       let span = `<span class="${btn}">${commentBox.innerText}</span>`;
-      commentBox.innerHTML = span;
+      comBox.innerHTML = span;
    } 
+});
+
+comBtn.addEventListener("click", () => {
+   const div = document.createElement("div");
+   div.innerHTML = comBox.innerHTML;
+   comSec.appendChild(div);
 });
