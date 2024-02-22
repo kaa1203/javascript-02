@@ -15,7 +15,7 @@ function darkTheme () {
 
 function lightTheme () {
     localStorage.setItem("theme", "light");
-    document.body.classList.remove("dark-mode"); 
+    document.body.removeAttribute("dark-mode"); 
 }
 
 toggle.addEventListener("click", () => {
