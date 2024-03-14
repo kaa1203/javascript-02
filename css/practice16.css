@@ -1,0 +1,82 @@
+.is-hidden {
+    display: none!important;
+}
+
+.add-todo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    font-size: 25px;
+    color: rgb(71, 74, 77);
+    bottom: 10%;
+    right: 3%;
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    border: 1px solid transparent;
+    background-color: aqua;
+    cursor: pointer;
+}
+
+.add-todo:hover {
+    box-shadow: 0px 5px 2px;
+}
+
+.todo-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+    border: 1px solid #181616;
+    padding: 30px 20px;
+}
+
+.todo-header {
+    text-align: center;
+}
+
+.todos {
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    gap: 15px;
+    position: relative;
+}
+
+.todos-title {
+    font-size: 20px;
+    width: 90%;
+    padding: 5px 10px 0px 0px;
+    border: none;
+    border-bottom: 1px solid rgb(22, 22, 22);
+    outline: none;
+    white-space: nowrap;
+}
+
+.checkbox {
+    width: 26px;
+    height: 25px;
+    border: 1px solid;
+}
+
+.check {
+    text-decoration: line-through;
+    opacity: .50;
+}
+
+.delete {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12px;
+    position: absolute;
+    right: 5px;
+    width: 25px;
+    height: 25px;
+    background-color: transparent;
+    font-size: 30px;
+    cursor: pointer;
+}
+
