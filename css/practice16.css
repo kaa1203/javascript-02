@@ -1,5 +1,5 @@
 .is-hidden {
-    display: none!important;
+    visibility: hidden;
 }
 
 .add-todo {
@@ -27,7 +27,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 10px;
+    gap: 3px;
     margin-top: 20px;
     border: 1px solid #181616;
     padding: 30px 20px;
