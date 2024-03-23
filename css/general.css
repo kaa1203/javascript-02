@@ -1,6 +1,14 @@
 * {
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: normal;
+    font-family: "Roboto", 'Courier New', Courier, monospace;
 }
 
 .container {
@@ -21,4 +29,19 @@
     display: block;
     width: 100%;
     height: auto;
+}
+
+.section {
+    padding: 100px;
+}
+
+.no-left-right {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.icon {
+    width: 16px;
+    height: 16px;
+    fill: currentColor;
 }

@@ -1,0 +1,187 @@
+* {
+   outline: none;
+}
+
+.is-hidden {
+    display: none!important;
+}
+
+header {
+    background-color: rgb(226, 226, 192);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.nav-logo,
+.logo {
+    font-family: "Protest Revolution";
+    cursor: pointer;
+}
+
+.logo {
+    font-size: 70px;
+    align-self: center;
+}
+
+.search-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding-top: 200px;
+    position: relative;
+}
+
+.search-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12px;
+    padding-right: 15px;
+    border-left: none;
+    border: 1px solid #916c3f;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    cursor: pointer;
+}
+
+.search-form {
+    display: flex;
+    justify-content: center;
+}
+
+.search-bar {
+    width: 40%;
+    padding: 10px;
+    padding-left: 25px;
+    border: 1px solid #916c3f;
+    border-right: none;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.del {
+    font-size: 25px;
+    position: absolute;
+    top: 330px;
+    right: 33%;
+    cursor: pointer;
+    color: black;
+}
+
+.navbar .search-form {
+    width: 50%;
+}
+
+.navbar .search-bar {
+    padding: 8px;
+    padding-left: 20px;
+    width: 60%;
+}
+
+.navbar .del {
+    top: 24px;
+    right: 39.5%;
+    font-size: 20px;
+}
+
+.navbar .search-btn {
+    padding: 6px 13px 6px 10px;
+}
+
+.navbar .icon {
+    width: 13px;
+    height: 13px;
+}
+
+.themes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: rgb(243, 242, 240);
+    cursor: pointer;
+}
+
+.themes .icon {
+    width: 20px;
+    height: 20px;
+}
+
+.themes:hover {
+    background-color: rgb(167, 168, 107);
+}
+
+.dark-theme {
+    background-color: #222528;
+    color: #e7e7e7;
+}
+
+.dark-theme .navbar .icon {
+    color: #000;
+}
+
+.dark-theme header {
+    background-color: #3a3a36;
+}
+
+.dark-theme .themes:hover {
+    background-color: rgb(141, 145, 137);
+}
+
+.dark-theme .card div {
+    background-color: #41423c;
+}
+
+.gallery {
+    margin: 30px 0;
+}
+
+.gallery .list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 15px 10px;
+}
+
+.gallery .item {
+    width: calc(100% / 4 - 24px);
+    transition: transform 250ms ease-in-out;
+}
+
+.gallery .item:hover {
+    transform: scale(1.03);
+}
+
+.image {
+    height: 180px;
+    object-fit: cover;
+}
+
+.card div {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    font-size: 14px;
+    background-color: rgb(158, 163, 134);
+    padding: 8px;
+}
+
+.card div p {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.result {
+    margin: 10px 15px;
+}
+

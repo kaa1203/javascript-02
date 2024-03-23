@@ -1,0 +1,70 @@
+.overlay {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #80808080;
+}
+
+.close {
+    
+    top: 15px;
+    right: 30px;
+}
+
+.next {
+    top: 42vh;
+    right: 25px;
+}
+
+.prev {
+    top: 42vh;
+    left: 25px;
+}
+
+.close,
+.next,
+.prev {
+    position: absolute;
+    font-size: 45px;
+    cursor: pointer;
+}
+
+.close:hover,
+.next:hover,
+.prev:hover {
+    color: black;
+}
+
+.showcase-image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 1100px;
+    height:  700px;
+}
+
+.showcase-image img {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+}
+
+.showcase-tags {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 15px;
+    background-color: #302e2e;
+    opacity: .75;
+    color: white;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.counter {
+    position: relative;
+    top: 20px;
+    left: 20px;
+}
