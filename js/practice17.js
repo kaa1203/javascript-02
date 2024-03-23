@@ -7,6 +7,7 @@ const gallery = document.querySelector(".gallery");
 const searchCon = document.querySelector(".search-wrapper");
 const nav = document.querySelector(".navbar");
 const themeBtn = document.querySelector(".themes");
+const toTopBtn = document.getElementsByClassName("go-up");
 
 let theme = localStorage.getItem("theme"); 
 
@@ -15,14 +16,27 @@ result.className = "result";
 let ul = document.createElement("ul");
 ul.className = "list";
 
+let toTop = document.createElement("button");
+toTop.className = "go-up is-hidden";
+toTop.innerHTML = `
+    <svg class="icon">
+        <use href="../images/icons.svg?#arrow-up"></use>
+    </svg>
+`;
+
 gallery.insertAdjacentElement("afterbegin", ul);
 gallery.insertAdjacentElement("afterbegin", result);
+gallery.insertAdjacentElement("afterbegin", toTop);
 
 document.addEventListener("input", onInput);
 document.addEventListener("click", onClick);
 document.addEventListener("submit", onSubmit);
 document.addEventListener("scroll", onScroll);
 themeBtn.addEventListener("click", themeClicked);
+toTopBtn[0].addEventListener("click", () => {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+})
 ul.addEventListener("click", myLightbox); //now i get why they use class
 
 
@@ -65,7 +79,7 @@ async function onSubmit(e) {
     try {
         let res = await fetch(`${BASE_LINK}?key=${key}&q=${q}&image_type=${image_type}&orientation=${orientation}&safesearch=${safesearch}&page=${page}&per_page=${per_page}`);
         let datas = res.json();
-        
+
         if (q === "") { return }
 
         datas.then(data => {
@@ -75,7 +89,7 @@ async function onSubmit(e) {
 
             result.innerText = `Showing ${total} search results`;
             ul.innerHTML = "";
-    
+            
             searchCon.classList.add("is-hidden");
             nav.classList.remove("is-hidden");
             result.classList.remove("is-hidden");
@@ -173,4 +187,9 @@ function onScroll() {
     if (scrollTop + clientHeight >= scrollHeight) {
         loadMore();
     }
+
+    if (scrollTop > 20) {
+      return toTopBtn[0].classList.remove("is-hidden");
+    }  
+    toTopBtn[0].classList.add("is-hidden");
 }

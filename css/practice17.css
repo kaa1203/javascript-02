@@ -2,6 +2,10 @@
    outline: none;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 .is-hidden {
     display: none!important;
 }
@@ -135,7 +139,8 @@ header {
     background-color: rgb(141, 145, 137);
 }
 
-.dark-theme .card div {
+.dark-theme .card div, 
+.dark-theme .go-up {
     background-color: #41423c;
 }
 
@@ -171,7 +176,7 @@ header {
     align-items: center;
     text-align: center;
     font-size: 14px;
-    background-color: rgb(158, 163, 134);
+    background-color: #9ea386;
     padding: 8px;
 }
 
@@ -183,5 +188,23 @@ header {
 
 .result {
     margin: 10px 15px;
+}
+
+.go-up {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 3;
+    width: 35px;
+    height: 35px;
+    border-radius: 4px;
+    border: 1px solid #f5f5f5;
+    padding: 8px;
+    color: inherit;
+    background-color: #9ea386;
+    cursor: pointer;
 }
 

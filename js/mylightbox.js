@@ -14,10 +14,11 @@ export function myLightbox(e) {
     let parent = e.target.parentElement;
     let parentIndex = [...lightbox].indexOf(parent);
 
+    slideIndex = parentIndex
     if (e.target.tagName === "IMG" && parent.classList.contains("lightbox")) {
     
         createElements();
-        createSlideshow(parentIndex);
+        createSlideshow(slideIndex);
     }
 }
 
